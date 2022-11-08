@@ -1,0 +1,268 @@
+{
+    "main": {
+        "redis": {
+            "cache": {
+                "host": "localhost",
+                "port": "6379",
+                "io_expire_s": 60
+            },
+            "pers": {
+                "host": "localhost",
+                "port": "6380"
+            }
+        },
+        "recovering": {
+            "enabled": false,
+            "remote_folder": "/home/sielte/code/imgs/real_remote/",
+            "local_folder": "/home/sielte/code/imgs/local/",
+            "massive_start": "02:00:00",
+            "massive_finish": "04:00:00",
+            "timer_massive": 30,
+            "timer_normal": 60,
+            "recovery_timeout": 60,
+            "threshold": 500
+        },
+        "modules_enabled": {
+            "camera": "fake",
+            "485": "fake",
+            "broker": "fake"
+        },
+        "sw_update": {
+            "package_remote_folder": "/home/sielte/code/imgs/real_remote/sw_upload/",
+            "package_local_folder": "/home/sielte/code/sw_update/",
+            "update_date_format": "%d-%m-%Y",
+            "update_time_format": "%H:%M"
+        },
+        "console": {
+            "server": {
+                "ip": "localhost",
+                "port": "9999"
+            }
+        },
+        "periodic": {
+            "enabled": false,
+            "evt_flows_timeout": 35,
+            "periodic_check_period": 60
+        },
+        "implant_data": {
+            "password": "password123",
+            "configurazione": "binario_unico",
+            "nome_rip": "Locale",
+            "nome_ivip": "Locale",
+            "nome_linea": "N/A",
+            "kmetrica_impianto": "N/A",
+            "coord_impianto": "N/A",
+            "prrA_bin": "pari",
+            "prrB_bin": "dispari",
+            "wire_calib_pari": "N/A",
+            "wire_calib_dispari": "N/A",
+            "ip_remoto": "192.168.1.X",
+            "loc_tratta_pari_inizio": "N/A",
+            "loc_tratta_pari_fine": "N/A",
+            "loc_tratta_dispari_inizio": "N/A",
+            "loc_tratta_dispari_fine": "N/A",
+            "cod_pic_tratta_pari": "N/A",
+            "cod_pic_tratta_dispari": "N/A",
+            "distanza_prr_IT_pari": 3,
+            "distanza_prr_IT_dispari": 3,
+            "t_mosf_prrA": 5,
+            "t_mosf_prrB": 5,
+            "t_off_ivip_prrA": 60,
+            "t_off_ivip_prrB": 60,
+            "fov": "N/A",
+            "sensor_width": "N/A",
+            "focal_distance": "N/A",
+            "camera_brand": "N/A",
+            "camera_model": "N/A"
+        },
+        "sshfs": {
+            "ip": "localhost",
+            "user": "sielte",
+            "ssh_key": "/home/sielte/.ssh/id_rsa",
+            "stg_folder": "",
+            "rip_folder": "/home/sielte/code/imgs/real_remote"
+        },
+        "ntp": {
+            "enabled": false,
+            "ip": "0.it.pool.ntp.org",
+            "timezone": "Europe/Rome",
+            "sync_interval": 43200
+        },
+        "ping": {
+            "enabled": false,
+            "cameras_ping_interval": 20,
+            "servers_ping_interval": 20
+        },
+        "settings": {
+            "wait_mosf": false,
+            "trim_mosf_data": false
+        }
+    },
+    "camera": {
+        "ids": {
+            "prrA": {
+                "camera_prrA_id_1": "DEV_000F314F0A90",
+                "camera_prrA_id_2": "",
+                "camera_prrA_id_3": "",
+                "camera_prrA_id_4": "",
+                "camera_prrA_id_5": "",
+                "camera_prrA_id_6": "",
+                "camera_prrA_ip_1": "192.168.1.11",
+                "camera_prrA_ip_2": "192.168.1.12",
+                "camera_prrA_ip_3": "192.168.1.13",
+                "camera_prrA_ip_4": "192.168.1.14",
+                "camera_prrA_ip_5": "192.168.1.15",
+                "camera_prrA_ip_6": "192.168.1.16"
+            },
+            "prrB": {
+                "camera_prrB_id_1": "",
+                "camera_prrB_id_2": "",
+                "camera_prrB_id_3": "",
+                "camera_prrB_id_4": "",
+                "camera_prrB_id_5": "",
+                "camera_prrB_id_6": "",
+                "camera_prrB_ip_1": "192.168.1.21",
+                "camera_prrB_ip_2": "192.168.1.22",
+                "camera_prrB_ip_3": "192.168.1.23",
+                "camera_prrB_ip_4": "192.168.1.24",
+                "camera_prrB_ip_5": "192.168.1.25",
+                "camera_prrB_ip_6": "192.168.1.26"
+            }
+        },
+        "xml_files": {
+            "prrA": {
+                "camera_prrA_xml_1": "/home/sielte/code/cam_xml/Pari_1.xml",
+                "camera_prrA_xml_2": "",
+                "camera_prrA_xml_3": "",
+                "camera_prrA_xml_4": "",
+                "camera_prrA_xml_5": "",
+                "camera_prrA_xml_6": ""
+            },
+            "prrB": {
+                "camera_prrB_xml_1": "",
+                "camera_prrB_xml_2": "",
+                "camera_prrB_xml_3": "",
+                "camera_prrB_xml_4": "",
+                "camera_prrB_xml_5": "",
+                "camera_prrB_xml_6": ""
+            }
+        },
+        "process_type": "fake",
+        "default_path": "/home/sielte/code/rig-dev/src/rigcam/main.py",
+        "simultaneous_dls": 1,
+        "trigger_timeout": 5,
+        "max_frame_dl_time": 2,
+        "event_timeout": 60,
+        "restart_attempts": 5,
+        "ready_timeout": 60
+    },
+    "io": {
+        "device": "/dev/ttyS0",
+        "speed": 9600,
+        "timeout": 1.0,
+        "parity": "none",
+        "stopbits": 2,
+        "cts": 0,
+        "timeoutAnswer": 1.0,
+        "retries": 2,
+        "set_linux_permissions": false
+    },
+    "broker": {
+        "consume": {
+            "broker": "localhost:9092",
+            "group": "stg",
+            "topic_req": [
+                "DiagnosiSistemiIVIP_STGtoRIP",
+                "AggiornamentoSW_STGtoRIP",
+                "AggiornamentoImpostazioni_STGtoRIP",
+                "AggiornamentoFinestraInizioTratta_STGtoRIP"
+            ]
+        },
+        "produce": {
+            "broker": "localhost:9092",
+            "group": "rip",
+            "timeout": 5.0
+        }
+    },
+    "boot": {
+        "exec_dir": "/home/sielte/code/exec",
+        "default_exec_path": "/home/sielte/code/rig-dev/src/rigproc/central/__main__.py",
+        "last_version_key": "last_version",
+        "rig_start_timestamp_key": "start_timestamp",
+        "rig_termination_key": "termination_message",
+        "boot_check_timeout": 30,
+        "exec_watch_interval": 10,
+        "alive_key": ""
+    },
+    "logging": {
+        "renew_log_files": true,
+        "renewal_time": "00:00",
+        "delete_older_logs": false,
+        "days_to_keep": 30,
+        "bus": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/tmp/log/bus",
+            "file_name": "log_bus",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": false
+        },
+        "camera": {
+            "format": "%(asctime)s [%(threadName)-8.8s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "custom",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/tmp/log/camera",
+            "file_name": "log_camera",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": true
+        },
+        "console": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/tmp/log/console",
+            "file_name": "log_console",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": false
+        },
+        "flow": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "alt",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/tmp/log/flow",
+            "file_name": "log_flow",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": true
+        },
+        "kafka": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/tmp/log/kafka",
+            "file_name": "log_kafka",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": true
+        },
+        "root": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/tmp/log/root",
+            "file_name": "log_root",
+            "file_mode": "append",
+            "memory_threshold": 500000000
+        }
+    }
+}

@@ -1,0 +1,38 @@
+change log 10/06 sielte 
+
+camera process:
+ - inserita distinzione uscita pulita da richiesta esterna redis o con errore [TEST ?]
+
+rig
+ main process:
+  - inserito ascolto evento uscita camera process con errore:
+  	- non esegue nulla all'evento pub sul redis ( però lo rilevo )
+  	- il thread camera controlla all'uscita del subprocess lo keyword, se errore respawn altrimenti stop thread
+  - lettura parametri impianto:
+  	- inserimento in json di configurazione dei 'implant_data' 	[ OK]
+  	- creazione dizionario main proc implant data, passaggio dello stesso via core ai flows [OK]
+
+ flows:
+  - gestione led di stato io:
+  	- inserito comando conferma led di stato io module dopo la diagnosi
+  	- inserito nel flow shutdown
+  	- t_alim tramite timer threading comando wake up
+
+ json model:
+  - todo costruzione parametri impianto da nuovo dict passato dal flow 'parameters' [OK ,pare]
+
+ broker:
+  - verifica gestione destinatario del topic in ingresso
+  	- discutere con soft strategy (vedi mail gentile 10/6)
+
+  Recovering:
+   - corretto invio evento, se malformed marcato o eliminato, tentivo invio altro evento...
+   - corretto bug tempo non massive
+   - todo ci sono blocchi nella flows..no buono
+
+
+
+CLOSE [KO] forse il recovery pare di si. verificare, non ancora ok
+
+a volte rimane attiva una richiesta del redis per lo stop del processo camera? com'è possibile che è solo un evento?
+

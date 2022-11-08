@@ -1,0 +1,462 @@
+{
+
+	"EventoPassaggioTreno": {
+		"event_type": "trigger",
+		"recovered": "boolean",
+		"id": "timestamp_nome_impianto_binario_direzione",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value",
+		"parameters": {
+			"nome_impianto": "name",
+			"nome_linea": "name",
+			"ip_rip": "value",
+			"prrA_bin": " unico pari dispari pari_bis dispari_bis",
+			"prrB_bin": "pari dispari pari_bis dispari_bis",
+			"wire_calib_pari": "value",
+			"wire_calib_dispari": "value",
+			"loc_tratta_inizio": "value",
+			"loc_tratta_fine": "value",
+			"cod_tratta_pari": "value",
+			"cod_tratta_dispari": "value",
+			"finestra_temp_pic_pari": "value",
+			"finestra_temp_pic_dispari": "value",
+			"tmosf_f": "time",
+			"tmosf_l": "time"		
+		},
+		"images": {
+			"inizio_upload": "HH:mm:ss",
+			"fine_upload": "HH:mm:ss",
+			"path": "folder_name_shared",
+			"names": ["array nomi immagini delle camere per questo evento"],
+			"exif": {
+				"fov": "value",
+				"sensor_width": "value",
+				"focal_distance": "value",
+				"camera_brand": "value",
+				"camera_model": "value"
+			}
+		},
+		"measures": {
+			"wire_measure_t0": "value",
+			"train_speed": "value",
+			"train_direction":  "Nord-Sud / Ovest - Est",
+			"binario": "pari dispari"
+		}
+	},
+
+	"DiagnosiSistemiIVIP_RIPtoSTG": {
+		"event_type": "diagnosis",
+		"recovered": "boolean",
+		"on_trigger": "booelan",
+		"id": "timestamp_nome_impianto_binario_direzione",
+		"transaction_id": "UUID 128bit",
+		"trigger_id": "timestamp_nome_impianto_binario_direzione",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value",
+		"parameters": {
+			"nome_impianto": "name",
+			"nome_linea": "name",
+			"ip_rip": "value",
+			"prrA_bin": " unico pari dispari pari_bis dispari_bis",
+			"prrB_bin": "pari dispari pari_bis dispari_bis",
+			"wire_calib_pari": "value",
+			"wire_calib_dispari": "value",
+			"loc_tratta_inizio": "value",
+			"loc_tratta_fine": "value",
+			"cod_tratta_pari": "value",
+			"cod_tratta_dispari": "value",
+			"finestra_temp_pic_pari": "value",
+			"finestra_temp_pic_dispari": "value",
+			"tmosf_f": "time",
+			"tmosf_l": "time"	
+		},	
+		"status": {
+			"cameras": {
+				"prrA": [{
+						"id": "value",
+						"status": "ok ko"
+					},
+					{
+						"id": "value",
+						"status": "ok ko"
+					},
+					{
+						"id": "value",
+						"status": "ok ko"
+					},
+					{
+						"id": "value",
+						"status": "ok ko"
+					},
+					{
+						"id": "value",
+						"status": "ok ko"
+					},
+					{
+						"id": "value",
+						"status": "ok ko"
+					}
+				],
+			"prrB": [{
+					"id": "value",
+					"status": "ok ko"
+				},
+				{
+					"id": "value",
+					"status": "ok ko"
+				},
+				{
+					"id": "value",
+					"status": "ok ko"
+				},
+				{
+					"id": "value",
+					"status": "ok ko"
+				},
+				{
+					"id": "value",
+					"status": "ok ko"
+				},
+				{
+					"id": "value",
+					"status": "ok ko"
+				}
+			]
+			}
+		},
+		"io": {
+			"status": "ok ko",
+			"battery": "ok ko",
+			"IVIP_power": "alim or battery",
+			"switch_prrA": "on off",
+			"switch_prrB": "on off",
+			"LdC_prrA": "on off ",
+			"LdC_prrB": "on off ",
+			"t_off_ivip_prrA": "tempo di spegnimento mancanza alim LdC",
+			"t_off_ivip_prrB": "tempo di spegnimento mancanza alim LdC",
+			"door_opened": "yes no",
+			"temperatures": {
+				"sens1": "how much",
+				"sens2": "how much"
+			},
+			"ventilation": {
+				"vent1": "ok ko",
+				"vent2": "ok ko"
+			},
+			"triggerA": {
+				"status": "ok ko",
+				"flashes": [{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					}
+				]
+			},
+			"triggerB": {
+				"status": "ok ko",
+				"flashes": [{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					},
+					{
+						"id": "value",
+						"status": "ok ko",
+						"efficiency": "level"
+					}
+				]
+			},
+			"mosf": [{
+					"id": "TxA",
+					"status": "ok ko"
+				},
+				{
+					"id": "TxB",
+					"status": "ok ko"
+				},
+				{
+					"id": "RxA",
+					"status": "ok ko"
+				},
+				{
+					"id": "RxB",
+					"status": "ok ko"
+				},
+				{
+					"id": "T_mosfxA",
+					"status": "secondi" 
+				},
+				{
+					"id": "T_mosfxB",
+					"status": "secondi" 
+				}
+	
+			]
+		}
+	},
+
+	"MOSFvalues": {
+		"event_type": "mosf",
+		"recovered": "boolean",
+		"on_trigger": "true",
+		"id": "timestamp_nome_impianto_binario_direzione",
+		"transaction_id": "UUID 128bit",
+		"trigger_id": "timestamp_nome_impianto_binario_direzione",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value",
+		"parameters": {
+			"nome_impianto": "name",
+			"nome_linea": "name",
+			"ip_rip": "value",
+			"prrA_bin": " unico pari dispari pari_bis dispari_bis",
+			"prrB_bin": "pari dispari pari_bis dispari_bis",	
+			"wire_calib_pari": "value",
+			"wire_calib_dispari": "value",
+			"loc_tratta_inizio": "value",
+			"loc_tratta_fine": "value",
+			"cod_tratta_pari": "value",
+			"cod_tratta_dispari": "value",
+			"finestra_temp_pic_pari": "value",
+			"finestra_temp_pic_dispari": "value",
+			"tmosf_f": "time",
+			"tmosf_l": "time"	
+		},
+		"measures": {
+			"wire_measure_t0": "value",
+			"wire_measures": ["array misure"]
+		}
+	},
+
+	"AllarmeAnomaliaIVIP": {
+		"event_type": "anomaly",
+		"id": "timestamp_nome_impianto_componente_ivip",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value",
+		"allarme": {
+			"id_allarme": "value",
+			"descrizione": "value",
+			"status": "ok/ko – on/off - value" 
+		}
+	},
+
+	"AggiornamentoImpostazioni_STGtoRIP": {
+		"event_type": "rip_settings_update",
+		"source": "SCP/STG locale",
+		"dashboard_place":"località dove ubicata la pdl/pdlc nazionale",
+		"user_id": "quale utente ha schedulato l’aggiornamento",	
+		"id": "timestamp_nome_stg_dashboard_place",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"rip_of_interest": ["nome_rip1", "nome_rip2", "nome_rip3", "RIP_test"],
+		"update_settings": {
+			"t_mosf_prrA": "secondi",
+			"t_mosf_prrB": "secondi",
+			"t_off_ivip_prrA": "secondi",
+			"t_off_ivip_prrB": "secondi"
+			}
+	},
+
+	"AggiornamentoImpostazioni_RIPtoSTG": {
+		"event_type": "rip_settings_update_check",
+		"source": "SCP/STG locale",
+		"dashboard_place":"località dove ubicata la pdl/pdlc nazionale",
+		"user_id": "quale utente ha schedulato l’aggiornamento",	
+		"id": "timestamp_nome_stg_dashboard_place",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"rip_of_interest": ["nome_rip1", "nome_rip2", "nome_rip3", "RIP_test"],
+		"nome_rip": "value",	
+		"check": "boolean",
+		"update_settings": {
+			"t_mosf_prrA": "secondi",
+			"t_mosf_prrB": "secondi",
+			"t_off_ivip_prrA": "secondi",
+			"t_off_ivip_prrB": "secondi"
+			}
+	},
+
+	"AggiornamentoFinestraInizioTratta_STGtoRIP": {
+		"event_type": "rip_finestra_temp_update",
+		"source": "STG",
+		"dashboard_place":"località dove ubicata la pdl/pdlc nazionale",
+		"user_id": "quale utente ha schedulato l’aggiornamento",	
+		"id": "timestamp_nome_stg_dashboard_place",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"rip_of_interest": ["nome_rip1", "nome_rip2", "nome_rip3", "RIP_test"],
+		"update_settings": {
+			"finestra_temp_pic_pari": "secondi",
+			"finestra_temp_pic_dispari": "secondi"
+			}
+	},
+
+	"AggiornamentoFinestraInizioTratta_RIPtoSTG": {
+		"event_type": "rip_finestra_temp_update_check",
+		"source": "STG",
+		"dashboard_place":"località dove ubicata la pdl/pdlc nazionale",
+		"user_id": "quale utente ha schedulato l’aggiornamento",	
+		"id": "timestamp_nome_stg_dashboard_place",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"rip_of_interest": ["nome_rip1", "nome_rip2", "nome_rip3", "RIP_test"],
+		"check": "boolean",
+		"nome_rip": "value",
+		"update_settings": {
+			"finestra_temp_pic_pari": "secondi",
+			"finestra_temp_pic_dispari": "secondi"
+			}
+	},
+
+	"AggiornamentoSW_STGtoRIP": {
+		"event_type": "rip_software_update",
+		"source": "SCP/STG locale",
+		"dashboard_place":"località dove ubicata la pdl/pdlc nazionale",
+		"user_id": "quale utente ha schedulato l’aggiornamento",	
+		"id": "timestamp_nome_stg_dashboard_place",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"rip_of_interest": ["nome_rip1", "nome_rip2", "nome_rip3", "RIP_test"],
+		"update_parameters": {
+				"date": "dd-mm-YYYY",
+				"time": "HH:mm:ss",
+				"package": "path di salvataggio in shared folder",
+				"version": "release version"
+				}
+	},
+
+	"AggiornamentoSW_RIPtoSTG-fase1": {
+		"event_type": "update_check",
+		"check": "boolean",
+		"source": "SCP/STG locale",
+		"dashboard_place":"località dove ubicata la pdl/pdlc nazionale",
+		"user_id": "quale utente ha schedulato l’aggiornamento",	
+		"id": "timestamp_nome_stg_nome_rip",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value",	
+		"rip_of_interest": ["nome_rip1", "nome_rip2", "nome_rip3", "RIP_test"],
+		"update_parameters": {
+			"date": "dd-mm-YYYY",
+			"time": "HH:mm:ss",
+			"package": "path di salvataggio in shared folder",	
+			"version": "release version"
+		}
+	},
+
+	"AggiornamentoSW_RIPtoSTG-fase2": {
+		"event_type": "update_info",
+		"id": "timestamp_nome_impianto_binario_direzione",
+		"transaction_id": "UUID 128bit",
+		"scheduled_id": "transaction_id del messaggio di schedulazione",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value",
+		"update_result": {
+			"start_date": "dd-mm-YYYY",
+			"start_time": "HH:mm:ss",
+			"end_date": "dd-mm-YYYY",
+			"end_time": "HH:mm:ss",
+			"update_version": "release version",
+			"status": "successed/failed",
+			"error": "error message"
+		}
+	},
+
+	"IscrizioneRip_RIPtoSTG": {
+		"event_type": "rip_subscription",
+		"id": "timestamp_nome_rip",
+		"transaction_id": "UUID 128bit",
+		"event_date": "dd-mm-YYYY",
+		"event_time": "HH:mm:ss",
+		"event_timestamp": "timestamp",
+		"nome_rip": "value", 
+		"parameters": {
+			"nome_impianto": "name",
+			"nome_linea": "name",
+			"ip_rip": "value",
+			"sw_version": "value",
+			"prrA_bin": "unico pari dispari pari_bis dispari_bis",
+			"prrB_bin": "pari dispari pari_bis dispari_bis",	
+			"wire_calib_pari": "value",
+			"wire_calib_dispari": "value",
+			"loc_tratta_inizio": "value",
+			"loc_tratta_fine": "value",
+			"cod_tratta_pari": "value",
+			"cod_tratta_dispari": "value",
+			"finestra_temp_pic_pari": "value",
+			"finestra_temp_pic_dispari": "value",
+			"t_mosf_prrA": "secondi",
+			"t_mosf_prrB": "secondi",
+			"t_off_ivip_prrA": "tempo di spegnimento mancanza alim LdC",
+			"t_off_ivip_prrB": "tempo di spegnimento mancanza alim LdC"
+		}
+	}
+}

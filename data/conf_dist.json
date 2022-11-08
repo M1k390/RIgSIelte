@@ -1,0 +1,268 @@
+{
+    "main": {
+        "redis": {
+            "cache": {
+                "host": "localhost",
+                "port": "6379",
+                "io_expire_s": 60
+            },
+            "pers": {
+                "host": "localhost",
+                "port": "6380"
+            }
+        },
+        "recovering": {
+            "enabled": true,
+            "remote_folder": "/home/sielte/code/imgs/real_remote/",
+            "local_folder": "/home/sielte/code/imgs/local/",
+            "massive_start": "02:00:00",
+            "massive_finish": "03:00:00",
+            "timer_massive": 30,
+            "timer_normal": 60,
+            "recovery_timeout": 60,
+            "threshold": 300
+        },
+        "modules_enabled": {
+            "camera": "deploy",
+            "485": "deploy",
+            "broker": "deploy"
+        },
+        "sw_update": {
+            "package_remote_folder": "/home/sielte/code/imgs/real_remote/sw_upload/",
+            "package_local_folder": "/home/sielte/code/sw_update/",
+            "update_date_format": "%d-%m-%Y",
+            "update_time_format": "%H:%M"
+        },
+        "console": {
+            "server": {
+                "ip": "192.168.2.7",
+                "port": "9999"
+            }
+        },
+        "periodic": {
+            "enabled": true,
+            "evt_flows_timeout": 180,
+            "periodic_check_period": 60
+        },
+        "implant_data": {
+            "password": "sielte",
+            "configurazione": "binario_doppio",
+            "nome_rip": "Pioltello LL",
+            "nome_ivip": "Pioltello LL",
+            "nome_linea": "Milano Lambrate Venezia (LL)",
+            "kmetrica_impianto": "13+586LL",
+            "coord_impianto": "45_29_22N 09_20_15_E",
+            "prrA_bin": "dispari",
+            "prrB_bin": "pari",
+            "wire_calib_pari": "F.I. mosf 146mm",
+            "wire_calib_dispari": "F.I. mosf 146mm",
+            "ip_remoto": "192.168.2.7",
+            "loc_tratta_pari_inizio": "MELZO SCALO",
+            "loc_tratta_pari_fine": "PIOLTELLO LIM.",
+            "loc_tratta_dispari_inizio": "PIOLTELLO LIM.",
+            "loc_tratta_dispari_fine": "MELZO SCALO",
+            "cod_pic_tratta_pari": "9326",
+            "cod_pic_tratta_dispari": "9325",
+            "distanza_prr_IT_pari": 3,
+            "distanza_prr_IT_dispari": 3,
+            "t_mosf_prrA": 5,
+            "t_mosf_prrB": 5,
+            "t_off_ivip_prrA": 60,
+            "t_off_ivip_prrB": 60,
+            "fov": "??",
+            "sensor_width": "1.1inch",
+            "focal_distance": "F35mm",
+            "camera_brand": "AlliedVision",
+            "camera_model": "Manta G-1236C"
+        },
+        "sshfs": {
+            "ip": "192.168.2.103",
+            "user": "sielte",
+            "ssh_key": "/home/sielte/.ssh/id_rsa",
+            "stg_folder": "/data/shared",
+            "rip_folder": "/home/sielte/code/imgs/real_remote"
+        },
+        "ntp": {
+            "enabled": false,
+            "ip": "192.168.2.101",
+            "timezone": "Europe/Rome",
+            "sync_interval": 43200
+        },
+        "ping": {
+            "enabled": true,
+            "cameras_ping_interval": 20,
+            "servers_ping_interval": 20
+        },
+        "settings": {
+            "wait_mosf": true,
+            "trim_mosf_data": true
+        }
+    },
+    "camera": {
+        "ids": {
+            "prrA": {
+                "camera_prrA_id_1": "DEV_000F314E56D7",
+                "camera_prrA_id_2": "DEV_000F314E56D3",
+                "camera_prrA_id_3": "DEV_000F314E56D6",
+                "camera_prrA_id_4": "DEV_000F314E56D5",
+                "camera_prrA_id_5": "DEV_000F314E56D4",
+                "camera_prrA_id_6": "DEV_000F314F0A93",
+                "camera_prrA_ip_1": "192.168.1.21",
+                "camera_prrA_ip_2": "192.168.1.22",
+                "camera_prrA_ip_3": "192.168.1.23",
+                "camera_prrA_ip_4": "192.168.1.24",
+                "camera_prrA_ip_5": "192.168.1.25",
+                "camera_prrA_ip_6": "192.168.1.26"
+            },
+            "prrB": {
+                "camera_prrB_id_1": "DEV_000F314F12F6",
+                "camera_prrB_id_2": "DEV_000F314F12F4",
+                "camera_prrB_id_3": "DEV_000F314F12F7",
+                "camera_prrB_id_4": "DEV_000F314F12F5",
+                "camera_prrB_id_5": "DEV_000F314F1147",
+                "camera_prrB_id_6": "DEV_000F314F12F3",
+                "camera_prrB_ip_1": "192.168.1.11",
+                "camera_prrB_ip_2": "192.168.1.12",
+                "camera_prrB_ip_3": "192.168.1.13",
+                "camera_prrB_ip_4": "192.168.1.14",
+                "camera_prrB_ip_5": "192.168.1.15",
+                "camera_prrB_ip_6": "192.168.1.16"
+            }
+        },
+        "xml_files": {
+            "prrA": {
+                "camera_prrA_xml_1": "/home/sielte/code/cam_xml/Dispari_1.xml",
+                "camera_prrA_xml_2": "/home/sielte/code/cam_xml/Dispari_2.xml",
+                "camera_prrA_xml_3": "/home/sielte/code/cam_xml/Dispari_3.xml",
+                "camera_prrA_xml_4": "/home/sielte/code/cam_xml/Dispari_4.xml",
+                "camera_prrA_xml_5": "/home/sielte/code/cam_xml/Dispari_5.xml",
+                "camera_prrA_xml_6": "/home/sielte/code/cam_xml/Dispari_6.xml"
+            },
+            "prrB": {
+                "camera_prrB_xml_1": "/home/sielte/code/cam_xml/Pari_1.xml",
+                "camera_prrB_xml_2": "/home/sielte/code/cam_xml/Pari_2.xml",
+                "camera_prrB_xml_3": "/home/sielte/code/cam_xml/Pari_3.xml",
+                "camera_prrB_xml_4": "/home/sielte/code/cam_xml/Pari_4.xml",
+                "camera_prrB_xml_5": "/home/sielte/code/cam_xml/Pari_5.xml",
+                "camera_prrB_xml_6": "/home/sielte/code/cam_xml/Pari_6.xml"
+            }
+        },
+        "process_type": "subprocess",
+        "default_path": "/home/sielte/code/exec/rigcam_1.1",
+        "simultaneous_dls": 1,
+        "trigger_timeout": 5,
+        "max_frame_dl_time": 4,
+        "event_timeout": 90,
+        "restart_attempts": 3,
+        "ready_timeout": 60
+    },
+    "io": {
+        "device": "/dev/ttyS0",
+        "speed": 9600,
+        "timeout": 1.0,
+        "parity": "none",
+        "stopbits": 2,
+        "cts": 0,
+        "timeoutAnswer": 1.0,
+        "retries": 2,
+        "set_linux_permissions": true
+    },
+    "broker": {
+        "consume": {
+            "broker": "192.168.2.101:9092",
+            "group": "group",
+            "topic_req": [
+                "DiagnosiSistemiIVIP_STGtoRIP",
+                "AggiornamentoSW_STGtoRIP",
+                "AggiornamentoImpostazioni_STGtoRIP",
+                "AggiornamentoFinestraInizioTratta_STGtoRIP"
+            ]
+        },
+        "produce": {
+            "broker": "192.168.2.101:9092",
+            "group": "group",
+            "timeout": 5.0
+        }
+    },
+    "boot": {
+        "exec_dir": "/home/sielte/code/exec",
+        "default_exec_path": "/home/sielte/code/exec/rigproc_1.1",
+        "last_version_key": "last_version",
+        "rig_start_timestamp_key": "start_timestamp",
+        "rig_termination_key": "termination_message",
+        "boot_check_timeout": 30,
+        "exec_watch_interval": 10,
+        "alive_key": ""
+    },
+    "logging": {
+        "renew_log_files": true,
+        "renewal_time": "00:00",
+        "delete_older_logs": false,
+        "days_to_keep": 30,
+        "bus": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/home/sielte/code/log/bus",
+            "file_name": "log_bus",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": false
+        },
+        "camera": {
+            "format": "%(asctime)s [%(threadName)-8.8s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "custom",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/home/sielte/code/log/camera",
+            "file_name": "log_camera",
+            "file_mode": "append",
+            "memory_threshold": 500000000,
+            "log_to_root": true
+        },
+        "console": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/home/sielte/code/log/console",
+            "file_name": "log_console",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": false
+        },
+        "flow": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "alt",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/home/sielte/code/log/flow",
+            "file_name": "log_flow",
+            "file_mode": "append",
+            "memory_threshold": 200000000,
+            "log_to_root": true
+        },
+        "kafka": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/home/sielte/code/log/kafka",
+            "file_name": "log_kafka",
+            "file_mode": "append",
+            "memory_threshold": 100000000,
+            "log_to_root": true
+        },
+        "root": {
+            "format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+            "formatter": "color",
+            "console_level": 10,
+            "file_level": 20,
+            "file_dir": "/home/sielte/code/log/root",
+            "file_name": "log_root",
+            "file_mode": "append",
+            "memory_threshold": 1000000000
+        }
+    }
+}

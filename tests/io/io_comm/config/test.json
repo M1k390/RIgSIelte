@@ -1,0 +1,123 @@
+{
+    "main":
+    	{
+    		"logging": {
+    				"path": "/home/user/ikos/sielte/log",
+    				"fname": "logger",
+    				"format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+    				"lvl": 10,
+    				"filemode": "a"
+    				},
+    	 	"redis":{
+    	 			"cache":{
+    	 				"host": "localhost",
+    	 				"port": "6379",
+    	 				"io_expire_s": 60 
+    	 			},
+    	 			"pers":{
+    					"host": "localhost",
+    	 				"port": "6380"
+    	 			}
+    	 	},
+    	 	"recovering":{
+        	 	"remote_folder": "/home/user/ikos/sielte/imgs/remote/",
+        	 	"local_folder": "/home/user/ikos/sielte/imgs/local/",
+        	 	"p_stop": "50",
+        	 	"ti_massive":"02:00:00",
+                "tf_massive":"04:00:00",
+                "d_massive":"30",
+                "d_normal":"120",
+                "delay_normal": "60",
+                "resend_timeout": "30"
+    	 	},
+    	 	"modules_enabled":{
+                 "camera":"deploy",
+                 "485":"deploy",
+                 "topic":"deploy"
+    	 	},
+    	 	"console":{
+        	 	"logging": {
+    				"path": "/home/user/ikos/sielte/log",
+    				"fname": "log_console",
+    				"format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)-30.30s} %(message)s",
+    				"lvl": 10,
+    				"filemode": "w"
+    				},
+        	 	"server":{
+                    "ip": "127.0.0.1",
+                    "port":"9999"
+        	 	}
+    	 	}
+    	},
+    
+    "camera":{
+        "ids":{
+            "prrA":{
+                "id1":"DEV_000F314DBB8B",
+                "id2":"",
+                "id3":"",
+                "id4":"",
+                "id5":"",
+                "id6":"",
+                "ip1":"192.168.1.129",
+                "ip2":"192.168.1.130",
+                "ip3":"192.168.1.131",
+                "ip4":"192.168.1.132",
+                "ip5":"192.168.1.133",
+                "ip6":"192.168.1.134"
+            },
+            "prrB":{
+                "id1":"",
+                "id2":"",
+                "id3":"",
+                "id4":"",
+                "id5":"",
+                "id6":"",
+                "ip1":"192.168.1.139",
+                "ip2":"192.168.1.140",
+                "ip3":"192.168.1.141",
+                "ip4":"192.168.1.142",
+                "ip5":"192.168.1.143",
+                "ip6":"192.168.1.144"
+            }
+        },
+        "process_type": "subprocess",
+        "processpath": "/home/user/ikos/sielte/camera/build/camera",
+        "xmlconf": "/home/user/ikos/sielte/cameraconf/sielte.xml",
+        "args": ["localhost", "6379", "/home/user/ikos/sielte/camera/build/logfile.log"]
+    },
+    
+    "io":{
+        "device": "/tmp/ttyV0",
+        "speed": 9600,
+        "timeout": 2.0,
+        "parity": "none",
+        "stopbits": 2,
+        "cts":0,
+        "timeoutAnswer":1.0,
+        "retries": 2,
+        "logging": {
+				"path": "/home/user/ikos/sielte/log",
+				"fname": "logger_bus",
+				"format": "%(asctime)s [%(threadName)-6.6s] [%(levelname)-5.5s] {%(module)s::%(funcName)s} %(message)s",
+				"lvl": 10,
+				"filemode": "w"
+				}
+    },
+    
+    "broker":{        
+        "consume":{
+            "broker":"localhost:2181",
+            "group": "group",
+            "topic_req": "topic_req"
+        },
+        "produce":{
+            "broker":"localhost:9092",
+            "group": "group",
+            "topic_evt": "topic_evt"
+        }
+    }
+    	
+}
+
+

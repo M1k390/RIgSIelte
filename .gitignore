@@ -1,0 +1,33 @@
+arch_tests/build/
+__pycache__/
+*.pyc
+*.o
+*.dir
+#*.pdf
+*.log
+rig/.spyproject/
+rig/.vscode/
+*.egg-info
+.pytest_cache
+
+
+# VSCode files
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# Local template
+tests/*/local.json
+
+# Building/exec files
+build/
+dist/
+bin/
+
+# Log and other temp files
+tmp/

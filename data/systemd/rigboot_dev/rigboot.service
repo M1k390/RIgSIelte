@@ -1,0 +1,26 @@
+[Unit]
+Description=Rip camera acquisition process (boot)
+After=redis.service
+After=redis6380.service
+StartLimitIntervalSec=0
+
+[Service]
+Environment=PATH=/opt/miniconda3/bin:/opt/miniconda3/condabin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+Environment=CONDA_SHLVL=1
+Environment=CONDA_EXE=/opt/miniconda3/bin/conda
+Environment=CONDA_PREFIX=/opt/miniconda3
+Environment=CONDA_PYTHON_EXE=/opt/miniconda3/bin/python
+Environment=CONDA_DEFAULT_ENV=base
+Environment=GENICAM_GENTL64_PATH=:/home/sielte/rig/install/Vimba_4_2/VimbaGigETL/CTI/x86_64bit
+Environment=GENICAM_GENTL32_PATH=:/home/sielte/rig/install/Vimba_4_2/VimbaGigETL/CTI/x86_32bit
+Type=simple
+Restart=no
+RestartSec=5
+User=sielte
+ExecStart=/home/sielte/code/scripts/run.sh
+ExecStop=/home/sielte/code/scripts/stop.sh
+PIDFile=/var/run/runrig/runrig.pid
+
+
+[Install]
+WantedBy=multi-user.target
