@@ -84,9 +84,9 @@ class FlowCameraEvent(FlowDiagnosis, Flow):
 		if isinstance(event_data, CameraEvent):
 			self.m_event_data= event_data
 			if event_data.pole == general.pole.prrA:
-				self.m_binary= general.binario.pari
+				self.m_binary= get_config().main.implant_data.prrA_bin.get()
 			else:
-				self.m_binary= general.binario.dispari
+				self.m_binary= get_config().main.implant_data.prrB_bin.get()
 		else:
 			self.m_logger.critical(f'Tried to create a Camera Event Flow with an object that is not a Camera Event: {event_data}')
 			self._error('Bad initialization')
